@@ -2,6 +2,9 @@ general:
 steps:
   mtaBuild:
     buildTarget: 'CF'
+    mtaBuildTool: 'cloudMbt'
+    defaultNpmRegistry: 'https://registry.npmjs.org/'
+    postBuildAction: 'mbt --version'
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
