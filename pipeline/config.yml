@@ -2,13 +2,6 @@ general:
 steps:
   mtaBuild:
     buildTarget: 'CF'
-    mtaBuildTool: 'cloudMbt'
-    platform: 'cf'
-    defaultNpmRegistry: 'https://registry.npmjs.org/'
-    cloudMbt:
-      dockerImage: 'alunde/mbtci:latest'
-    dockerBasedModules: ['conciletime-cli']
-    postBuildAction: 'mbt --version'
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
@@ -16,4 +9,3 @@ steps:
       org: 's0019621851trial'
       space: 'dev'
       credentialsId: 'CF_CREDENTIALSID'
-
