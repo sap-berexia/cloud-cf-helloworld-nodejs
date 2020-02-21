@@ -2,7 +2,6 @@ general:
 steps:
   mtaBuild:
     buildTarget: 'CF'
-    dockerImage: ''
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
