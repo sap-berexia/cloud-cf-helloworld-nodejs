@@ -6,7 +6,7 @@ node() {
     }
 
     stage('build') {
-    	mtaBuild script: this
+    	buildExecute script:this, buildTool: 'mta'
     }
 
     stage('deploy') {
