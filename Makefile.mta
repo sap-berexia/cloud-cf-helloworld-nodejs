@@ -29,6 +29,7 @@ pre_build: pre_validate
 
 
 # Execute module build
+echo "01"
 define build_rule
 $(1): validate
 	@$(MBT) module build -m=$(1) -p=${p} -t=${t}
@@ -37,10 +38,10 @@ endef
 $(foreach mod,$(modules),$(eval $(call build_rule,$(mod))))# Create META-INF folder with MANIFEST.MF & mtad.yaml
 meta: $(modules) post_build
 	@$(MBT) gen meta -p=${p} -t=${t}
-
+echo "02"
 post_build: $(modules)
 	@$(MBT) project build -p=post -t=${t}
-
+echo "03"
 # Validate mta.yaml
 validate: pre_build
 	@$(MBT) validate -r=${strict}
