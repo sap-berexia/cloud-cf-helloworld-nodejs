@@ -3,6 +3,7 @@ steps:
   mtaBuild:
     buildTarget: 'CF'
     defaultNpmRegistry: 'https://npm.sap.com'
+    dockerImage: ''
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
