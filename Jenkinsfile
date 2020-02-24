@@ -6,7 +6,7 @@ node() {
     }
 
     stage('build') {
-    	mtaBuild script:this
+    	sudo mbt build --platform cf --target ./
     }
 
     stage('deploy') {
