@@ -1,17 +1,19 @@
 @Library('piper-lib-os') _
-node() {
-    stage('prepare') {
-        checkout scm
-        setupCommonPipelineEnvironment script:this
-    }
+pipeline {
+    agent any
+    stages {
+        stage('prepare') {
+            checkout scm
+            setupCommonPipelineEnvironment script:this
+        }
 
-    stage('build') {
-	steps {
+        stage('build') {
+	    steps {
     	    sh "sudo mbt build --platform cf --target ./"
-	}
-    }
+	    }
+        }
 
-    stage('deploy') {
-    	cloudFoundryDeploy script: this
-    }
+        stage('deploy') {
+    	    cloudFoundryDeploy script: this
+        }
 }
