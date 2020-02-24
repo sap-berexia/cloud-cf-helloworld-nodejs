@@ -6,7 +6,9 @@ node() {
     }
 
     stage('build') {
-    	sudo mbt build --platform cf --target ./
+	steps {
+    	    sh "sudo mbt build --platform cf --target ./"
+	}
     }
 
     stage('deploy') {
