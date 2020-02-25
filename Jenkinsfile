@@ -7,7 +7,7 @@ node() {
 
     stage('build') {
 	sh "cd /home/user01/workspace/cloud-cf-helloworld-nodejs"
-        sh "sudo mbt build --platform cf --target ./"
+        sh "mbt build --platform cf --target ./"
     }
 
     stage('deploy') {
