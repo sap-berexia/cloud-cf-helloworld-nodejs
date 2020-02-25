@@ -6,6 +6,7 @@ node() {
     }
 
     stage('build') {
+	sh "whoami"
 	sh "cd /home/user01/workspace/cloud-cf-helloworld-nodejs"
         sh "mbt build --platform cf --target ./"
     }
