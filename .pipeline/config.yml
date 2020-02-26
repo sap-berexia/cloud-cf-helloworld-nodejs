@@ -1,7 +1,7 @@
 general:
   buildTool: 'mta'
 steps:
-  piperPipelineStageBuild:
+  buildExecute:
     buildTool: 'mta'
     dockerImage: ''
     
