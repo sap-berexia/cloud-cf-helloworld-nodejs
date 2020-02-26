@@ -1,4 +1,5 @@
 general:
+  buildTool: 'mta'
 steps:
   piperPipelineStageBuild:
     buildTool: 'mta'
