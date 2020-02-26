@@ -1,11 +1,16 @@
 @Library('piper-lib-os') _
 node() {
     stage('prepare') {
-	piperPipelineStageInit script:this
+	deleteDir()
+        checkout scm
         setupCommonPipelineEnvironment script:this
     }
 
     stage('build') {
-	piperPipelineStageBuild script:this
+	mtaBuild script:this
+    }
+
+    stage('deploy') {
+    	cloudFoundryDeploy script: this
     }
 }

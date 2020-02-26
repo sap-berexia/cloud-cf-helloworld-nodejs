@@ -1,7 +1,7 @@
 general:
-  buildTool: 'mta'
 steps:
-  buildExecute:
-    buildTool: 'mta'
+  mtaBuild:
+    mtaBuildTool: 'classic'
     dockerImage: ''
+    mtaJarLocation: '/home/user01/Downloads/mta_archive_builder-1.1.20.jar'
     
