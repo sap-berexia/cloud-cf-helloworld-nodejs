@@ -1,13 +1,2 @@
 general:
-steps:
-  mtaBuild:
-    buildTarget: 'CF'
-    defaultNpmRegistry: 'https://npm.sap.com'
-    dockerImage: ''
-  cloudFoundryDeploy:
-    deployTool: 'mtaDeployPlugin'
-    deployType: 'standard'
-    cloudFoundry:
-      org: 's0019621851trial'
-      space: 'dev'
-      credentialsId: 'CF_CREDENTIALSID'
+  buildTool: 'mta'
