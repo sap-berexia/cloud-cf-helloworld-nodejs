@@ -6,6 +6,6 @@ node() {
     }
 
     stage('build') {
-	piperPipelineStageBuild script:this buildTool : 'mta'
+	piperPipelineStageBuild script:this, buildTool : 'mta'
     }
 }
