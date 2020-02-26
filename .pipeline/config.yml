@@ -5,4 +5,11 @@ steps:
     mtaBuildTool: 'classic'
     dockerImage: ''
     mtaJarLocation: '/home/user01/Downloads/mta_archive_builder-1.1.20.jar'
+  cloudFoundryDeploy:
+    deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'
+    cloudFoundry:
+      org: 's0019621851trial'
+      space: 'dev'
+      credentialsId: 'CF_CREDENTIALSID'
     
